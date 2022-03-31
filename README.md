@@ -1,7 +1,7 @@
 # fml_project
 
 ## Mr. Ping
-Mr. Ping is an agent trained to play Bomberman with temporal diference q-learning without the involvement of neural network. It relies only on standard python libraries with can found in the requierments.
+Mr. Ping is an agent trained to play Bomberman with temporal diference q-learning without the involvement of a neural network. It relies only on standard python libraries with can be found in the requierments.
 
 ```
 cycler==0.11.0
