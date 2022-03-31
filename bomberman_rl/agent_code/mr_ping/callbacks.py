@@ -18,8 +18,8 @@ LEARNING_RATE = 0.05
 DISCOUNT = 0.95
 EVERY = 100
 
-# EPS_START = 0.9
-EPS_START = 0.05
+EPS_START = 0.9
+# EPS_START = 0.05
 EPS_END = 0.05
 EPS_DECAY = 10000
 MEMORY_SIZE = 6
@@ -153,7 +153,7 @@ def state_to_features(self, game_state: dict):
     free_directions = get_free_directions(game_state["self"][-1], game_state)
     features[0] = sum(val*(2**idx) for idx, val in enumerate(reversed(free_directions)))
 
-    # check distance from save area
+    # check direction to save area
     save_area_direction = get_direction_to_save_area(game_state, all_paths)
     features[1] = sum(val*(2**idx) for idx, val in enumerate(reversed(save_area_direction)))
 

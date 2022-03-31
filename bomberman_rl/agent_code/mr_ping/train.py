@@ -20,7 +20,7 @@ TRANSITION_HISTORY_SIZE = 4  # keep only ... last transitions
 RECORD_ENEMY_TRANSITIONS = 1.0  # record enemy transitions with probability ...
 
 LEARNING_RATE = 0.1
-DISCOUNT = 0.5
+DISCOUNT = 0.9
 EVERY = 100
 
 ACTIONS = ['UP', 'RIGHT', 'DOWN', 'LEFT', 'WAIT', 'BOMB']
@@ -288,8 +288,8 @@ def end_of_round(self, last_game_state: dict, last_action: str, events: List[str
         ax.plot(np.arange(self.rounds_done // EVERY) * EVERY, self.stats["max"], label="max")
         ax.yaxis.grid(True, which="major", linestyle='--')
         ax.set_title("Accumulated rewards per game")
-        ax.set_xlabel("Number of rounds")
-        ax.set_ylabel("Rewards value")
+        ax.set_xlabel("number of rounds")
+        ax.set_ylabel("accumulated value")
         plt.legend()
         fig.savefig("rewards.png")
 
@@ -297,8 +297,8 @@ def end_of_round(self, last_game_state: dict, last_action: str, events: List[str
         ax.plot(np.arange(self.rounds_done // EVERY) * EVERY, self.stats["q_table_len"], label="q table length")
         ax.yaxis.grid(True, which="major", linestyle='--')
         ax.set_title("Q table length")
-        ax.set_xlabel("Number of rounds")
-        ax.set_ylabel("Length")
+        ax.set_xlabel("number of rounds")
+        ax.set_ylabel("length")
         plt.legend()
         fig.savefig("q_table_len.png")
         
@@ -307,7 +307,7 @@ def end_of_round(self, last_game_state: dict, last_action: str, events: List[str
         ax.yaxis.grid(True, which="major", linestyle='--')
         ax.set_title("Epsilon")
         ax.set_xlabel("Number of rounds")
-        ax.set_ylabel("Epsilon value")
+        ax.set_ylabel("epsilon value")
         plt.legend()
         fig.savefig("eps.png")
         
@@ -315,7 +315,7 @@ def end_of_round(self, last_game_state: dict, last_action: str, events: List[str
         ax.plot(np.arange(self.rounds_done // EVERY) * EVERY, self.stats["delta"], label="delta")
         ax.yaxis.grid(True, which="major", linestyle='--')
         ax.set_title("Temporal difference")
-        ax.set_xlabel("Number of rounds")
+        ax.set_xlabel("number of rounds")
         ax.set_ylabel("delta value")
         plt.legend()
         fig.savefig("delta.png")

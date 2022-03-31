@@ -131,3 +131,10 @@ dmypy.json
 
 # pdf
 *.pdf
+
+# png
+*.png
+
+# swap
+*.swo
+*.swp
