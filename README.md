@@ -15,8 +15,6 @@ Pillow==9.0.1
 pygame==2.1.2
 pyparsing==3.0.7
 python-dateutil==2.8.2
-scikit-learn==1.0.2
-scipy==1.8.0
 six==1.16.0
 threadpoolctl==3.1.0
 tqdm==4.62.3
