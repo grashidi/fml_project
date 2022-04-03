@@ -20,3 +20,7 @@ threadpoolctl==3.1.0
 tqdm==4.62.3
 typing-extensions==4.1.1
 ```
+
+## my_agent 
+The code for our deep_q_learning  can be found in the sub-folder /bomberman/agent code/deep_q_agent.
+To run this agent the packages NumPy and PyTorch are required.
